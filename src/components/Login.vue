@@ -88,7 +88,7 @@ export default {
       this.$refs['elForm'].validate(async valid => {
         if (!valid) return
         // TODO 提交表单
-        const { data: res } = await this.$http.post('login', this.formData)
+        const { data: res } = await this.$http.post('login', this.formData);
         // console.log(res);
         if (res.meta.status !== 200) return this.$message.error(res.meta.msg)
         this.$message.success(res.meta.msg)
